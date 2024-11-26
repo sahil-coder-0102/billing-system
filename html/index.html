@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu Side for Playlist -->
+        <div class="menu_side">
+            <img src="musics logo.png" class="logo" alt="Music Player Logo">
+            <h2>Your Playlist</h2>
+            <ul id="songList">
+                <!-- Songs will be dynamically loaded based on artist selection -->
+            </ul>
+        </div>
+
+        <!-- Artists Side for Displaying Artist Images -->
+        <div class="artist_side">
+            <h2>Artists</h2>
+            <div class="artist_list">
+                <div class="artist" onclick="displaySongsByArtist('Artist 1')">
+                    <img src="alanwalker logo.jpg" >
+                    <p>Artist 1</p>
+                </div>
+                <div class="artist" onclick="displaySongsByArtist('Artist 2')">
+                    <img src="artist2.jpg" alt="Artist 2">
+                    <p>Artist 2</p>
+                </div>
+                <!-- Add more artists as needed -->
+            </div>
+        </div>
+
+        <!-- Song Player Side -->
+        <div class="song_side">
+            <div class="now_playing">
+                <img src="song1.jpg" id="currentSongImage" alt="Now Playing Song">
+                <h4 id="currentSongTitle">Song Title</h4>
+                <p id="currentSongArtist">Artist Name</p>
+            </div>
+            <div class="controls">
+                <button id="prev" class="control-button small-button" onclick="prevSong()">&#171;</button>
+                <button id="playPause" class="control-button medium-button" onclick="togglePlayPause()">&#9658;</button>
+                <button id="next" class="control-button small-button" onclick="nextSong()">&#187;</button>
+                <button id="repeat" class="control-button small-button">&#8635;</button>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progressBar" value="0" max="100" oninput="updateProgress()">
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

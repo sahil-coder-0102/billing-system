@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="billing1 image.png" alt="Billing System Logo" class="logo">
+        <h1>Feedback Form</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Home</a></li>
+                <li><a href="clientfeedback.html">Feedback</a></li>
+                <li><a href="adminsettings.html">Settings</a></li>
+                <li><a href="clientcontact.html">Contacts us</a></li>
+                <li><a href="addproduct.html">Add Products</a></li>
+                <li><a href="inventory.html">Iventory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content container">
+        <section class="feedback-form">
+            <h2>Submit Your Feedback</h2>
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" placeholder="Enter your name">
+            <label for="customerFeedback">Feedback:</label>
+            <textarea id="customerFeedback" placeholder="Enter your feedback"></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </section>
+        
+        <section class="feedback-list">
+            <h2>Recent Feedback</h2>
+            <ul id="feedbackList"></ul>
+        </section>
+    </div>
+
+    <script src="../js/clientfeedback.js"></script>
+</body>
+</html>

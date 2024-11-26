@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System Settings</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <img src="billing1 image.png" alt="Billing System Logo" class="logo">
+            <h1>Billing System Settings</h1>
+            <nav>
+                <ul>
+                    <li><a href="login.html">Home</a></li>
+                    <li><a href="clientfeedback.html">Feedback</a></li>
+                    <li><a href="adminsettings.html">Settings</a></li>
+                    <li><a href="clientcontact.html">Contacts us</a></li>
+                    <li><a href="addproduct.html">Add Products</a></li>
+                    <li><a href="inventory.html">Iventory</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Container for settings form and current settings display -->
+        <div class="container">
+            <section class="settings-form">
+                <h2>General Settings</h2>
+
+                <!-- Form for Tax Rate -->
+                <div class="setting-item">
+                    <label for="taxRate">Tax Rate (%):</label>
+                    <input type="number" id="taxRate" placeholder="Enter tax rate" step="0.1" min="0">
+                </div>
+
+                <!-- Form for Discount Limit -->
+                <div class="setting-item">
+                    <label for="discountLimit">Max Discount (%):</label>
+                    <input type="number" id="discountLimit" placeholder="Enter max discount" step="0.1" min="0">
+                </div>
+
+                <!-- Dropdown for selecting currency -->
+                <div class="setting-item">
+                    <label for="currency">Currency:</label>
+                    <select id="currency">
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="GBP">GBP (£)</option>
+                    </select>
+                </div>
+
+                <!-- Checkbox for enabling/disabling user management -->
+                <div class="setting-item">
+                    <label for="userManagement">Enable User Management:</label>
+                    <input type="checkbox" id="userManagement">
+                </div>
+
+                <!-- Button to save settings -->
+                <div class="setting-item">
+                    <button onclick="saveSettings()">Save Settings</button>
+                </div>
+            </section>
+
+            <!-- Display of current settings -->
+            <section class="settings-display">
+                <h2>Current Settings</h2>
+                <ul id="currentSettingsList"></ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="../js/adminsettings.js"></script>
+</body>
+</html> 

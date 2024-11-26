@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="billing1 image.png" alt="Billing System Logo" class="logo">
+        <h1>Add New Product</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Home</a></li>
+                <li><a href="clientfeedback.html">Feedback</a></li>
+                <li><a href="adminsettings.html">Settings</a></li>
+                <li><a href="clientcontact.html">Contacts us</a></li>
+                <li><a href="addproduct.html">Add Products</a></li>
+                <li><a href="inventory.html">Iventory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-add-area">
+        <h2>Product Details</h2>
+        
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" placeholder="Enter product name">
+        
+        <label for="marketPrice">Market Price ($):</label>
+        <input type="number" id="marketPrice" placeholder="Enter market price" step="0.01">
+        
+        <label for="sellingPrice">Selling Price ($):</label>
+        <input type="number" id="sellingPrice" placeholder="Enter selling price" step="0.01">
+        
+        <label for="productQuantity">Stock In:</label>
+        <input type="number" id="productQuantity" placeholder="Enter stock in" min="1">
+        
+        <label for="stockOut">Stock Out:</label>
+        <input type="number" id="stockOut" placeholder="Enter stock out" min="0">
+        
+        <button onclick="addProduct()">Add Product</button>
+        <button onclick="viewInventory()">Go to Inventory</button>
+    </div>
+
+    <script src="../js/addproduct.js"></script>
+</body>
+</html>

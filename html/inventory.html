@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/inventory.css">
+</head>
+<body>
+    <header>
+        <img src="billing1 image.png" alt="Billing System Logo" class="logo">
+        <h1>Inventory Management</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Home</a></li>
+                <li><a href="clientfeedback.html">Feedback</a></li>
+                <li><a href="adminsettings.html">Settings</a></li>
+                <li><a href="clientcontact.html">Contacts us</a></li>
+                <li><a href="addproduct.html">Add Products</a></li>
+                <li><a href="inventory.html">Iventory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="inventory-area">
+        <h2>Product List</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Market Price</th>
+                    <th>Selling Price</th>
+                    <th>Stock In</th>
+                    <th>Stock Out</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryList"></tbody>
+        </table>
+    </div>
+
+    <script src="../js/inventory.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login1.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1>Billing System Login</h1>
+    </header>
+
+    <div class="background-animation">
+        <!-- Background animated elements -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="login-area">
+        <img src="billing1 image.png" alt="Billing System Logo" class="logo"> <!-- Add your logo here -->
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error" class="error-message"></p>
+    </div>
+
+    <script src="../js/login1.js"></script>
+</body>
+</html>

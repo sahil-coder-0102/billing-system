@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f76b1c;
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Push the background animation behind the form */
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: bubbleAnimation 10s infinite;
+    animation-timing-function: linear;
+}
+
+.bubble:nth-child(1) {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 7s;
+}
+
+.bubble:nth-child(2) {
+    left: 30%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(3) {
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 15s;
+}
+
+.bubble:nth-child(5) {
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 9s;
+}
+
+@keyframes bubbleAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Inventory Area */
+.inventory-area {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Inventory Table */
+#inventoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#inventoryTable th,
+#inventoryTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#inventoryTable th {
+    background-color: #f76b1c;
+    color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .inventory-area {
+        width: 100%;
+    }
+}
